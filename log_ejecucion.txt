@@ -1,0 +1,14 @@
+[2026-11-14T16:41:31] === INICIO 01_extraccion_api ===
+[2026-11-14T16:41:32] Entorno: Python 3.13.18 | yfinance 0.2.66 | pandas 2.2.3 | requests 2.32.4
+[2026-11-14T16:41:32] Parámetros: FECHA_INICIO=2015-01-01 FECHA_CORTE=2025-12-31 intervalo=1d endpoint=https://query1.finance.yahoo.com/v8/finance/chart
+[2026-11-14T16:41:34] VOLCABC1.LM | filas=2754 | 2015-01-02 a 2025-12-31 | moneda=None | HTTP(sondeo)=200 | sha256=76e7a7aa5c8be4fb... | OK
+[2026-11-14T16:41:36] FERREYC1.LM | filas=2755 | 2015-01-02 a 2025-12-31 | moneda=None | HTTP(sondeo)=200 | sha256=2b3ff6cb8669cc79... | OK
+[2026-11-14T16:41:37] ALICORC1.LM | filas=2755 | 2015-01-02 a 2025-12-31 | moneda=None | HTTP(sondeo)=200 | sha256=0ed32af58ab1fc8c... | OK
+[2026-11-14T16:41:39] CPACASC1.LM | filas=2756 | 2015-01-02 a 2025-12-31 | moneda=None | HTTP(sondeo)=200 | sha256=39de0baf43a6109b... | OK
+[2026-11-14T16:41:41] UNACEMC1.LM | filas=2757 | 2015-01-02 a 2025-12-31 | moneda=None | HTTP(sondeo)=200 | sha256=1c108d642b48db99... | OK
+[2026-11-14T16:41:43] MINSURI1.LM | filas=2756 | 2015-01-02 a 2025-12-31 | moneda=None | HTTP(sondeo)=200 | sha256=8360a70f17c5dc9b... | OK
+[2026-11-14T16:41:45] LUSURC1.LM | filas=2759 | 2015-01-02 a 2025-12-31 | moneda=None | HTTP(sondeo)=200 | sha256=9f6fbd6e116bd22d... | OK
+[2026-11-14T16:41:47] BACKUSI1.LM | filas=2757 | 2015-01-02 a 2025-12-31 | moneda=None | HTTP(sondeo)=200 | sha256=abf0f77c36ba3950... | OK
+[2026-11-14T16:41:48] RESUMEN: 8 OK, 0 con ERROR | filas totales=22,049
+[2026-11-14T16:41:48] Monedas de cotización detectadas: ['None'] (si hay más de una, convertir en 03)
+[2026-11-14T16:41:48] === FIN 01_extraccion_api ===

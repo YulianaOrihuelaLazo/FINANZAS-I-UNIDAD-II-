@@ -1,0 +1,9 @@
+﻿ticker,emisora,sector,moneda,bolsa,zona_horaria,filas,primera_fecha,ultima_fecha,http_sondeo,sha256_crudo,archivo,estado,error
+VOLCABC1.LM,Volcan Compañía Minera (clase B),Minería,,YHD,America/New_York,2754,2015-01-02,2025-12-31,200,76e7a7aa5c8be4fb855358c8916054225817ec10c2790407884eb693f24392bc,api_yahoo_VOLCABC1.LM_2024200514G.csv,OK,
+FERREYC1.LM,Ferreycorp,Industria/Servicios,,YHD,America/New_York,2755,2015-01-02,2025-12-31,200,2b3ff6cb8669cc79ed52e0226829336907a635ac723fea9b986bca707a965871,api_yahoo_FERREYC1.LM_2024200514G.csv,OK,
+ALICORC1.LM,Alicorp,Consumo,,YHD,America/New_York,2755,2015-01-02,2025-12-31,200,0ed32af58ab1fc8c38b68fafca1aba1c2632fa3a530ef0cb97d0626ff8e176ba,api_yahoo_ALICORC1.LM_2024200514G.csv,OK,
+CPACASC1.LM,Cementos Pacasmayo,Construcción,,YHD,America/New_York,2756,2015-01-02,2025-12-31,200,39de0baf43a6109b3cd5545df92f952c091b44e3ba1142fe77c59beeebb81575,api_yahoo_CPACASC1.LM_2024200514G.csv,OK,
+UNACEMC1.LM,UNACEM,Construcción,,YHD,America/New_York,2757,2015-01-02,2025-12-31,200,1c108d642b48db99a69a463d8cb5d392cd907a5a8ccaab5f5131ecc4e8847b6e,api_yahoo_UNACEMC1.LM_2024200514G.csv,OK,
+MINSURI1.LM,Minsur,Minería,,YHD,America/New_York,2756,2015-01-02,2025-12-31,200,8360a70f17c5dc9b0a94fc3e41dc407ba84f91fc55396a22dd17deb02777cad2,api_yahoo_MINSURI1.LM_2024200514G.csv,OK,
+LUSURC1.LM,Luz del Sur,Energía,,YHD,America/New_York,2759,2015-01-02,2025-12-31,200,9f6fbd6e116bd22def07a9f66d74603d7abd0e7426610a561872ef557466c9b3,api_yahoo_LUSURC1.LM_2024200514G.csv,OK,
+BACKUSI1.LM,Unión de Cervecerías Backus,Consumo,,YHD,America/New_York,2757,2015-01-02,2025-12-31,200,abf0f77c36ba39502f95bc065f43f254704a85ad5c995bcb1686e99da6772c3f,api_yahoo_BACKUSI1.LM_2024200514G.csv,OK,
