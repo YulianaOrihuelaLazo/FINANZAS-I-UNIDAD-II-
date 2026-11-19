@@ -117,3 +117,27 @@
 [2026-11-19T16:16:33] Tabla cruda unificada: bvl_cotizaciones_crudo_2024200514G.csv | filas=21992 | sha256=5b7c13234383247d...
 [2026-11-19T16:16:33] RESUMEN: filas totales BVL=21,992 | solicitudes con ERROR=0
 [2026-11-19T16:16:33] === FIN 02_scraping_web ===
+[2026-11-19T20:13:35] === INICIO 03_limpieza_datos ===
+[2026-11-19T20:13:35] Entorno: Python 3.13.18 | pandas 2.2.3 | numpy 2.4.6 | retorno=log
+[2026-11-19T20:13:36] Yahoo leído: 8 archivos | filas=22,049 | tickers=['ALICORC1', 'BACKUSI1', 'CPACASC1', 'FERREYC1', 'LUSURC1', 'MINSURI1', 'UNACEMC1', 'VOLCABC1']
+[2026-11-19T20:13:36] BVL leído: filas=21,992 | tickers=['ALICORC1', 'BACKUSI1', 'CPACASC1', 'FERREYC1', 'LUSURC1', 'MINSURI1', 'UNACEMC1', 'VOLCABC1'] | cierre<=0 tratados como sin precio: 2072
+[2026-11-19T20:13:36] Unión externa: ambas=21,356 | solo_yahoo=693 | solo_bvl=636
+[2026-11-19T20:13:36] Procesado: datos_procesados_2024200514G.csv | filas=22,685 | columnas=15 | sha256=7675ee5eee5b4cd209fee241f3883ebe595578f2f566be1c5ddcd407a91f6129
+[2026-11-19T20:13:36] Resumen de calidad: resumen_calidad_2024200514G.csv
+[2026-11-19T20:13:36] === FIN 03_limpieza_datos ===
+[2026-11-19T20:31:26] === INICIO 03_limpieza_datos ===
+[2026-11-19T20:31:26] Entorno: Python 3.13.18 | pandas 2.2.3 | numpy 2.4.6 | retorno=log
+[2026-11-19T20:31:27] Yahoo leído: 8 archivos | filas=22,049 | tickers=['ALICORC1', 'BACKUSI1', 'CPACASC1', 'FERREYC1', 'LUSURC1', 'MINSURI1', 'UNACEMC1', 'VOLCABC1']
+[2026-11-19T20:31:27] BVL leído: filas=21,992 | tickers=['ALICORC1', 'BACKUSI1', 'CPACASC1', 'FERREYC1', 'LUSURC1', 'MINSURI1', 'UNACEMC1', 'VOLCABC1'] | cierre<=0 tratados como sin precio: 2072
+[2026-11-19T20:31:27] Unión externa: ambas=21,356 | solo_yahoo=693 | solo_bvl=636
+[2026-11-19T20:31:27] Procesado: datos_procesados_2024200514G.csv | filas=22,685 | columnas=17 | sha256=4d28ea436f2ba9880c26a826d89f238a3ef4932bf59db5b6390e2ff2746bf102
+[2026-11-19T20:31:27] Resumen de calidad: resumen_calidad_2024200514G.csv
+[2026-11-19T20:31:27] === FIN 03_limpieza_datos ===
+[2026-11-19T20:33:33] === INICIO 03_limpieza_datos ===
+[2026-11-19T20:33:33] Entorno: Python 3.13.18 | pandas 2.2.3 | numpy 2.4.6 | retorno=log
+[2026-11-19T20:33:33] Yahoo leído: 8 archivos | filas=22,049 | tickers=['ALICORC1', 'BACKUSI1', 'CPACASC1', 'FERREYC1', 'LUSURC1', 'MINSURI1', 'UNACEMC1', 'VOLCABC1']
+[2026-11-19T20:33:33] BVL leído: filas=21,992 | tickers=['ALICORC1', 'BACKUSI1', 'CPACASC1', 'FERREYC1', 'LUSURC1', 'MINSURI1', 'UNACEMC1', 'VOLCABC1'] | cierre<=0 tratados como sin precio: 2072
+[2026-11-19T20:33:34] Unión externa: ambas=21,356 | solo_yahoo=693 | solo_bvl=636
+[2026-11-19T20:33:34] Procesado: datos_procesados_2024200514G.csv | filas=22,685 | columnas=17 | sha256=4d28ea436f2ba9880c26a826d89f238a3ef4932bf59db5b6390e2ff2746bf102
+[2026-11-19T20:33:34] Resumen de calidad: resumen_calidad_2024200514G.csv
+[2026-11-19T20:33:34] === FIN 03_limpieza_datos ===
