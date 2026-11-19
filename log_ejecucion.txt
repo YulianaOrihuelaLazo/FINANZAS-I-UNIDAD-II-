@@ -141,3 +141,11 @@
 [2026-11-19T20:33:34] Procesado: datos_procesados_2024200514G.csv | filas=22,685 | columnas=17 | sha256=4d28ea436f2ba9880c26a826d89f238a3ef4932bf59db5b6390e2ff2746bf102
 [2026-11-19T20:33:34] Resumen de calidad: resumen_calidad_2024200514G.csv
 [2026-11-19T20:33:34] === FIN 03_limpieza_datos ===
+[2026-11-19T22:06:14] === INICIO 03_limpieza_datos ===
+[2026-11-19T22:06:14] Entorno: Python 3.13.18 | pandas 2.2.3 | numpy 2.4.6 | retorno=log
+[2026-11-19T22:06:14] Yahoo leído: 8 archivos | filas=22,049 | tickers=['ALICORC1', 'BACKUSI1', 'CPACASC1', 'FERREYC1', 'LUSURC1', 'MINSURI1', 'UNACEMC1', 'VOLCABC1']
+[2026-11-19T22:06:14] BVL leído: filas=21,992 | tickers=['ALICORC1', 'BACKUSI1', 'CPACASC1', 'FERREYC1', 'LUSURC1', 'MINSURI1', 'UNACEMC1', 'VOLCABC1'] | cierre<=0: 2072 | reconstruidos desde el cierre anterior corregido del día siguiente: 1074 | sin precio: 998
+[2026-11-19T22:06:15] Unión externa: ambas=21,356 | solo_yahoo=693 | solo_bvl=636
+[2026-11-19T22:06:16] Procesado: datos_procesados_2024200514G.csv | filas=22,685 | columnas=18 | sha256=3848825afadacfe629227c7ae9aa1a34359a5ce3eeb6f6de117ad17d1edae2da
+[2026-11-19T22:06:16] Resumen de calidad: resumen_calidad_2024200514G.csv
+[2026-11-19T22:06:16] === FIN 03_limpieza_datos ===

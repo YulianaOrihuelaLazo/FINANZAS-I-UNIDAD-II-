@@ -1,7 +1,7 @@
 # Nombres y apellidos: YULIANA ORIHUELA LAZO
 # Código de matrícula: 2024200514G
-# Tema: Valor en riesgo (VaR) de un portafolio de acciones peruanas - N°70
-# Fecha de extracción: 2026-11-14 (Yahoo) y 2026-11-19 (BVL); este script solo procesa los crudos (la fecha de cada ejecución queda en log_ejecucion.txt)
+# Tema: Valor en riesgo (VaR) de un portafolio de acciones peruanas -N° 70
+# Fecha de extracción:  2026-11-19 
 #
 # =============================================================================
 # 03_limpieza_datos.py  -  LIMPIEZA, UNIÓN Y VARIABLES DERIVADAS
@@ -21,7 +21,8 @@
 #     dividendos); con la BVL se usa el cierre sin ajustar, por lo que el retorno BVL puede
 #     mostrar saltos en fechas ex-dividendo. Sirve como contraste de robustez, no como serie principal.
 #   * Los retornos se calculan entre observaciones consecutivas CON precio válido de cada fuente.
-#   * Cierre BVL <= 0 se trata como "sin precio" (NaN); no se inventa ni se arrastra ningún precio.
+#   * Cierre BVL <= 0 sin negociación = "sin precio" (NaN). Cierre BVL <= 0 CON negociación: se reconstruye con el
+#     "cierre anterior corregido" de la sesión siguiente (columna cierre_bvl_reconstruido = True); no se arrastra ningún precio.
 #   * Yahoo: Close/Adj Close <= 0 también pasa a NaN. Los días con volumen 0 se marcan, no se eliminan.
 #
 # Ubicación esperada: <proyecto>/codigo/03_limpieza_datos.py
@@ -150,10 +151,17 @@ def leer_bvl() -> pd.DataFrame:
         "cierre_anterior_bvl": cierre_ant.where(cierre_ant > 0),
     })
     n_cierre_cero = int((cierre <= 0).sum())
+    # La BVL no publica cierre en algunos días CON negociación (cierre = 0). Ese cierre se recupera del
+    # "cierre anterior corregido" de la sesión siguiente (verificado: precio promedio / ese valor ~ 1,0).
+    b = b.sort_values(["ticker", "fecha"]).reset_index(drop=True)
+    sgte = b.groupby("ticker")["cierre_anterior_bvl"].shift(-1)
+    recon = b["cierre_bvl"].isna() & (b["cantidad_bvl"].fillna(0) > 0) & (sgte > 0)
+    b["cierre_bvl"] = b["cierre_bvl"].where(~recon, sgte)
+    b["cierre_bvl_reconstruido"] = recon
     dup = int(b.duplicated(["ticker", "fecha"]).sum())
     if dup:
         raise ValueError(f"BVL: {dup} filas con (ticker, fecha) duplicada")
-    log(f"BVL leído: filas={len(b):,} | tickers={sorted(b['ticker'].unique())} | cierre<=0 tratados como sin precio: {n_cierre_cero}")
+    log(f"BVL leído: filas={len(b):,} | tickers={sorted(b['ticker'].unique())} | cierre<=0: {n_cierre_cero} | reconstruidos desde el cierre anterior corregido del día siguiente: {int(recon.sum())} | sin precio: {int(b['cierre_bvl'].isna().sum())}")
     return b
 
 
@@ -191,7 +199,7 @@ def main() -> int:
     columnas = ["ticker", "fecha", "cierre_yahoo", "cierre_ajustado_yahoo", "volumen_yahoo", "dividendo_yahoo",
                 "cierre_bvl", "cantidad_bvl", "monto_efectivo_bvl", "ret_yahoo", "ret_bvl",
                 "sin_volumen_yahoo", "sin_negociacion_bvl", "dif_cierre", "fuente_presente",
-                "cierre_anterior_bvl", "ret_bvl_corr"]
+                "cierre_anterior_bvl", "ret_bvl_corr", "cierre_bvl_reconstruido"]
     df = df[columnas]
 
     # ---- Resumen de calidad por emisor (insumo para el artículo) ----
@@ -212,6 +220,7 @@ def main() -> int:
             "pct_ret_cero_yahoo": round(100 * (ry == 0).mean(), 2) if len(ry) else np.nan,
             "pct_ret_cero_bvl": round(100 * (rb == 0).mean(), 2) if len(rb) else np.nan,
             "pct_ret_cero_bvl_corr": round(100 * (rc == 0).mean(), 2) if len(rc) else np.nan,
+            "n_cierres_bvl_reconstruidos": int((g["cierre_bvl_reconstruido"] == True).sum()),
             "n_cierre_ant_distinto_0_5pct": int(fd.sum()),
             "n_de_esos_con_dividendo_yahoo": int((fd & (g["dividendo_yahoo"] > 0)).sum()),
         })
