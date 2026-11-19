@@ -1,0 +1,13 @@
+serie,metodo,nivel,VaR_medio_pct,VaR_medio_S,VaR_maximo_pct
+BVL (principal),Paramétrico,95 %,1.654504,16545.038776,3.153201
+BVL (principal),Paramétrico,99 %,2.362122,23621.217769,4.499398
+BVL (principal),Histórico,95 %,1.462421,14624.21227,2.414715
+BVL (principal),Histórico,99 %,2.747006,27470.061691,6.216768
+BVL (principal),Monte Carlo,95 %,1.654648,16546.483928,3.22
+BVL (principal),Monte Carlo,99 %,2.359691,23596.909236,4.768631
+Yahoo (contraste),Paramétrico,95 %,1.75927,17592.703177,3.242045
+Yahoo (contraste),Paramétrico,99 %,2.511092,25110.921,4.626815
+Yahoo (contraste),Histórico,95 %,1.476251,14762.513151,2.53977
+Yahoo (contraste),Histórico,99 %,2.860299,28602.991148,6.212623
+Yahoo (contraste),Monte Carlo,95 %,1.758825,17588.249832,3.289799
+Yahoo (contraste),Monte Carlo,99 %,2.508006,25080.058351,4.77771

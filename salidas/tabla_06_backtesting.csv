@@ -1,0 +1,13 @@
+serie,metodo,nivel,dias_evaluados,excepciones,tasa_observada_pct,tasa_esperada_pct,kupiec_LR,kupiec_p,christoffersen_ind_LR,christoffersen_ind_p,cobertura_cond_LR,cobertura_cond_p,excepciones_ultimos_250,zona_basilea_99
+BVL (principal),Paramétrico,95 %,2498,104,4.163331,5.0,3.894046,0.048458,24.586747,1e-06,28.480793,1e-06,6,NA
+BVL (principal),Paramétrico,99 %,2498,45,1.801441,1.0,13.095337,0.000296,36.017205,0.0,49.112542,0.0,2,verde
+BVL (principal),Histórico,95 %,2498,128,5.124099,5.0,0.080364,0.776805,18.233977,2e-05,18.314341,0.000105,9,NA
+BVL (principal),Histórico,99 %,2498,38,1.521217,1.0,5.911478,0.015043,18.89481,1.4e-05,24.806288,4e-06,3,verde
+BVL (principal),Monte Carlo,95 %,2498,103,4.123299,5.0,4.287892,0.038385,25.157228,1e-06,29.445119,0.0,5,NA
+BVL (principal),Monte Carlo,99 %,2498,44,1.761409,1.0,11.924703,0.000554,31.058944,0.0,42.983646,0.0,2,verde
+Yahoo (contraste),Paramétrico,95 %,2419,96,3.968582,5.0,5.812331,0.015914,18.438849,1.8e-05,24.251181,5e-06,6,NA
+Yahoo (contraste),Paramétrico,99 %,2419,48,1.984291,1.0,18.402637,1.8e-05,22.196097,2e-06,40.598735,0.0,4,verde
+Yahoo (contraste),Histórico,95 %,2419,126,5.208764,5.0,0.219082,0.63974,15.760501,7.2e-05,15.979583,0.000339,10,NA
+Yahoo (contraste),Histórico,99 %,2419,35,1.446879,1.0,4.287481,0.038394,20.538003,6e-06,24.825484,4e-06,3,verde
+Yahoo (contraste),Monte Carlo,95 %,2419,94,3.885903,5.0,6.823322,0.008998,16.346893,5.3e-05,23.170215,9e-06,6,NA
+Yahoo (contraste),Monte Carlo,99 %,2419,49,2.02563,1.0,19.814257,9e-06,26.52381,0.0,46.338067,0.0,4,verde

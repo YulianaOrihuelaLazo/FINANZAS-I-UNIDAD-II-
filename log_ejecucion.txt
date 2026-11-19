@@ -149,3 +149,36 @@
 [2026-11-19T22:06:16] Procesado: datos_procesados_2024200514G.csv | filas=22,685 | columnas=18 | sha256=3848825afadacfe629227c7ae9aa1a34359a5ce3eeb6f6de117ad17d1edae2da
 [2026-11-19T22:06:16] Resumen de calidad: resumen_calidad_2024200514G.csv
 [2026-11-19T22:06:16] === FIN 03_limpieza_datos ===
+[2026-11-19T22:29:30] === INICIO 04_analisis ===
+[2026-11-19T22:29:30] Entorno: Python 3.13.18 | pandas 2.2.3 | numpy 2.4.6 | scipy 1.16.3 | matplotlib 3.10.0
+[2026-11-19T22:29:30] Parámetros: SEMILLA=514 VENTANA=250 N_SIM=10000 NIVELES=(0.95, 0.99) V0=1,000,000 retorno=log
+[2026-11-19T22:29:30] Datos procesados leídos: filas=22,685 | columnas=18
+[2026-11-19T22:29:30] Serie BVL (principal): fechas=2,749 | fechas completas para las 8 acciones=2,748 | descartadas=1
+[2026-11-19T22:29:30] Serie Yahoo (contraste): fechas con ambas fuentes=2,671 | completas para las 8 acciones=2,669
+[2026-11-19T22:29:30] Cartera: ['ALICORC1', 'BACKUSI1', 'CPACASC1', 'FERREYC1', 'LUSURC1', 'MINSURI1', 'UNACEMC1', 'VOLCABC1'] | pesos iguales 1/8
+[2026-11-19T22:29:45] Tabla guardada: var_diario_bvl_2024200514G.csv (2748 filas)
+[2026-11-19T22:30:00] Tabla guardada: var_diario_yahoo_2024200514G.csv (2669 filas)
+[2026-11-19T22:30:00] Tabla guardada: tabla_01_descriptivos.csv (9 filas)
+[2026-11-19T22:30:00] Tabla guardada: tabla_02_correlaciones.csv (8 filas)
+[2026-11-19T22:30:00] Tabla guardada: tabla_03_concordancia_yahoo_bvl.csv (8 filas)
+[2026-11-19T22:30:00] Tabla guardada: tabla_04_liquidez_bvl.csv (8 filas)
+[2026-11-19T22:30:00] Tabla guardada: tabla_05_var_promedio.csv (12 filas)
+[2026-11-19T22:30:00] Tabla guardada: tabla_06_backtesting.csv (12 filas)
+[2026-11-19T22:30:00] Figura guardada: fig_01_var99_vs_perdidas.png
+[2026-11-19T22:30:01] Figura guardada: fig_02_excepciones_por_metodo.png
+[2026-11-19T22:30:01] Figura guardada: fig_03_correlaciones.png
+[2026-11-19T22:30:02] Figura guardada: fig_04_liquidez_monto_efectivo.png
+[2026-11-19T22:30:02] Figura guardada: fig_05_retornos_cero_yahoo_vs_bvl.png
+[2026-11-19T22:30:02] Backtesting | BVL (principal) | Paramétrico 95 % | días=2498 | excepciones=104 (4.16 % vs 5.0 %) | Kupiec p=0.048
+[2026-11-19T22:30:02] Backtesting | BVL (principal) | Paramétrico 99 % | días=2498 | excepciones=45 (1.80 % vs 1.0 %) | Kupiec p=0.000
+[2026-11-19T22:30:02] Backtesting | BVL (principal) | Histórico 95 % | días=2498 | excepciones=128 (5.12 % vs 5.0 %) | Kupiec p=0.777
+[2026-11-19T22:30:02] Backtesting | BVL (principal) | Histórico 99 % | días=2498 | excepciones=38 (1.52 % vs 1.0 %) | Kupiec p=0.015
+[2026-11-19T22:30:02] Backtesting | BVL (principal) | Monte Carlo 95 % | días=2498 | excepciones=103 (4.12 % vs 5.0 %) | Kupiec p=0.038
+[2026-11-19T22:30:02] Backtesting | BVL (principal) | Monte Carlo 99 % | días=2498 | excepciones=44 (1.76 % vs 1.0 %) | Kupiec p=0.001
+[2026-11-19T22:30:02] Backtesting | Yahoo (contraste) | Paramétrico 95 % | días=2419 | excepciones=96 (3.97 % vs 5.0 %) | Kupiec p=0.016
+[2026-11-19T22:30:02] Backtesting | Yahoo (contraste) | Paramétrico 99 % | días=2419 | excepciones=48 (1.98 % vs 1.0 %) | Kupiec p=0.000
+[2026-11-19T22:30:02] Backtesting | Yahoo (contraste) | Histórico 95 % | días=2419 | excepciones=126 (5.21 % vs 5.0 %) | Kupiec p=0.640
+[2026-11-19T22:30:02] Backtesting | Yahoo (contraste) | Histórico 99 % | días=2419 | excepciones=35 (1.45 % vs 1.0 %) | Kupiec p=0.038
+[2026-11-19T22:30:02] Backtesting | Yahoo (contraste) | Monte Carlo 95 % | días=2419 | excepciones=94 (3.89 % vs 5.0 %) | Kupiec p=0.009
+[2026-11-19T22:30:02] Backtesting | Yahoo (contraste) | Monte Carlo 99 % | días=2419 | excepciones=49 (2.03 % vs 1.0 %) | Kupiec p=0.000
+[2026-11-19T22:30:02] === FIN 04_analisis ===
