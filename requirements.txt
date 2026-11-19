@@ -1,0 +1,8 @@
+# Entorno de ejecución usado: Python 3.13.18 (Google Colab). Versiones tomadas de los logs y de la consulta en ese mismo entorno.
+# Instalación: pip install -r requirements.txt
+yfinance==0.2.66
+requests==2.32.4
+pandas==2.2.3
+numpy==2.4.6
+scipy==1.16.3
+matplotlib==3.10.0
